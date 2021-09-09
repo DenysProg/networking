@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCellID" id="KGk-i7-Jjw" customClass="PostsTableViewCell" customModule="networking" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="156"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="156"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RAK-eE-c1T">
+                        <rect key="frame" x="8" y="16" width="304" height="132"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uX9-Dy-BHU">
+                                <rect key="frame" x="16" y="12" width="272" height="62"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="headTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gui-uv-cXt">
+                                <rect key="frame" x="16" y="78" width="272" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="qbC-yh-yzj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uX9-Dy-BHU" secondAttribute="trailing" constant="16" id="7jh-GJ-Wxu"/>
+                            <constraint firstAttribute="trailing" secondItem="gui-uv-cXt" secondAttribute="trailing" constant="16" id="Mr5-ju-IiJ"/>
+                            <constraint firstItem="gui-uv-cXt" firstAttribute="top" secondItem="uX9-Dy-BHU" secondAttribute="bottom" constant="4" id="UvY-OK-l4i"/>
+                            <constraint firstItem="gui-uv-cXt" firstAttribute="leading" secondItem="RAK-eE-c1T" secondAttribute="leading" constant="16" id="VJ8-ah-g4C"/>
+                            <constraint firstItem="uX9-Dy-BHU" firstAttribute="top" secondItem="RAK-eE-c1T" secondAttribute="top" constant="12" id="WRl-yG-LHk"/>
+                            <constraint firstAttribute="bottom" secondItem="gui-uv-cXt" secondAttribute="bottom" constant="14" id="uRz-Q8-Qr7"/>
+                            <constraint firstItem="uX9-Dy-BHU" firstAttribute="leading" secondItem="RAK-eE-c1T" secondAttribute="leading" constant="16" id="wvk-4b-hji"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="RAK-eE-c1T" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="5fe-g6-hEh"/>
+                    <constraint firstAttribute="trailing" secondItem="RAK-eE-c1T" secondAttribute="trailing" constant="8" id="9Om-3s-QFf"/>
+                    <constraint firstAttribute="bottom" secondItem="RAK-eE-c1T" secondAttribute="bottom" constant="8" id="B7H-un-uJb"/>
+                    <constraint firstItem="RAK-eE-c1T" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="kBF-95-tzl"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bodyLabe" destination="gui-uv-cXt" id="TI0-0d-p07"/>
+                <outlet property="postsView" destination="RAK-eE-c1T" id="vCU-fX-ydV"/>
+                <outlet property="titleLable" destination="uX9-Dy-BHU" id="ewD-EY-Gro"/>
+            </connections>
+            <point key="canvasLocation" x="70" y="78"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
